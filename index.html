@@ -31,47 +31,40 @@
             </div>
             <div class="col-4">
 
-              <button class="btn btn-outline-success" onclick="leapFun()" id="mybutton" data-bs-toggle="modal"
+              <button class="btn btn-outline-success mx400" onclick="leapFun()" id="mybutton" data-bs-toggle="modal"
                 data-bs-target="#myModal">Submit</button>
             </div>
           </div>
 
       </div>
-    </div>
-    <div class="modal fade" id="myModal">
-      <div class="modal-dialog modal-dialog-centered modal-sm">
-        <div class="modal-content">
-        </div>
       </div>
     </div>
-  </div>
 
-  <script>
 
-    let year = document.getElementById('mytext');
-    let btn = document.getElementById('mybutton');
+      <script>
+        let year = document.getElementById('mytext');
+        let btn = document.getElementById('mybutton');
 
-    year.addEventListener("input", function () {
-      btn.disabled = (this.value === '' || this.value === ' ');
-    })
-    function leapFun() {
-      // console.log(year);
-      if (year.value > 0) {
-        document.getElementById("mybutton").disabled = true;
-        if (year.value % 4 === 0) {
-          alert("It is leap year");
-          year.value = "";
-        } else {
-          alert("It is not a leap year");
-          year.value = "";
+        year.addEventListener("input", function () {
+          btn.disabled = (this.value === '' || this.value === ' ');
+        })
+        function leapFun() {
+          // console.log(year);
+          if (year.value > 0) {
+            document.getElementById("mybutton").disabled = true;
+            if (year.value % 4 === 0) {
+              alert("It is leap year");
+              year.value = "";
+            } else {
+              alert("It is not a leap year");
+              year.value = "";
+            }
+          }
+
         }
-      }
-
-    }
 
 
-
-  </script>
+      </script>
 
 </body>
 
